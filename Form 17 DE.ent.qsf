@@ -26,81 +26,6 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
-  - name: FORM17_DICT.F17_R01_BUILDING
-    conditions:
-      - questionText:
-          EN: |
-            <p>1. What is the type of building occupied by your household?</p><p>ANSWER THROUGH OBSERVATION. IF&nbsp;<br></p><p>DOUBTFUL, ASK THE RESPONDENT.</p><p></p>
-  - name: FORM17_DICT.F17_R01_BUILDOTH
-    conditions:
-      - questionText:
-          EN: |
-            1. What is the type of building occupied by your household?<div><br></div><div>OTHER TYPES OF BUILDING (E.G. BUS/TRAILER,BOAT, TENT), SPECIFY:__________</div><p></p>
-  - name: FORM17_DICT.F17_R03_ROOF
-    conditions:
-      - questionText:
-          EN: |
-            2. What is the main construction material of the roof of this building/housing unit?<div><br></div><div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><p></p>
-  - name: FORM17_DICT.F17_R03_OTHERS
-    conditions:
-      - questionText:
-          EN: |
-            2. What is the main construction material of the roof of this building/housing unit?<div><br></div><div>9 Others, specify ______</div><p></p>
-  - name: FORM17_DICT.F17_R04_WALLS
-    conditions:
-      - questionText:
-          EN: |
-            3. What is the construction material of the outer walls of this building?<div><br></div><div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><p></p>
-  - name: FORM17_DICT.F17_R04_WALLSOTH
-    conditions:
-      - questionText:
-          EN: |
-            3. What is the construction material of the outer walls of this building?<div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><div><br></div><div>99 OTHERS, SPECIFY: ___________</div><p></p>
-  - name: FORM17_DICT.F17_R06_MFLOOR
-    conditions:
-      - questionText:
-          EN: |
-            4.&nbsp;What is the main construction material of the floor of this housing unit?<p></p>
-  - name: FORM17_DICT.F17_R06_MFLOOROTH
-    conditions:
-      - questionText:
-          EN: |
-            4. What is the main construction material of the floor of this housing unit?<div><br></div><div>9 OTHERS, SPECIFY: ___________</div><p></p>
-  - name: FORM17_DICT.F17_R09_BROOM
-    conditions:
-      - questionText:
-          EN: |
-            5.&nbsp;How many bedrooms does this housing unit have?<p></p>
-  - name: FORM17_DICT.F17_R10_TENURE
-    conditions:
-      - questionText:
-          EN: |
-            6.&nbsp;What is the tenure status of the housing unit and lot occupied by your household?<p></p>
-  - name: FORM17_DICT.F17_R12_ELCTRCTY
-    conditions:
-      - questionText:
-          EN: |
-            7.&nbsp;Is there any electricity in the dwelling place?<p></p>
-  - name: FORM17_DICT.F17_Q01_MSWATER
-    conditions:
-      - questionText:
-          EN: |
-            8.&nbsp;What is your household's main source of water supply?<p></p>
-  - name: FORM17_DICT.F17_Q01A_MSWATER
-    conditions:
-      - questionText:
-          EN: |
-            8. What is your household's main source of water supply?<div><br></div><div>99 Others, specify _______</div><p></p>
-  - name: FORM17_DICT.F17_Q03_WDRINK
-    conditions:
-      - questionText:
-          EN: |
-            9. What is the main source of drinking water used by members of your household?<div><br></div><div>If unclear, probe to identify the place from which members&nbsp; of this household most often collect drinking water (collection point)</div><p></p>
-  - name: FORM17_DICT.F17_Q03A_WDRINK
-    conditions:
-      - questionText:
-          EN: |
-            9. What is the main source of drinking water used by members of your household?<div><br></div><div>If unclear, probe to identify the place from which members&nbsp; of this household most often collect drinking water (collection point)</div><div><br></div><div>99 OTHERS, SPECIFY _________</div><p></p>
   - name: FORM17_DICT.F17_REG_PSGC
     conditions:
       - questionText:
@@ -126,6 +51,16 @@ questions:
       - questionText:
           EN: |
             <p style="text-align: center; "><b>Enumeration Area Number</b></p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_EC
+    conditions:
+      - questionText:
+          EN: |
+            <div style="text-align: center;"><b>Enumerator Code</b></div><p></p>
+  - name: FORM17_DICT.F17_NOE
+    conditions:
+      - questionText:
+          EN: |
+            <div style="text-align: center;"><b>Name of Enumerator</b></div><p></p>
   - name: FORM17_DICT.F17_DATE1
     conditions:
       - questionText:
@@ -236,4 +171,59 @@ questions:
       - questionText:
           EN: |
             <p>Total</p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_A01_LSTNAME3
+    conditions:
+      - logic: curocc() = 1
+        questionText:
+          EN: |
+            <p>1. Who is the household head?&nbsp;</p><p>(Last Name, First Name Middle Initial., Suffix)</p><p>(eg Dela Cruz, Juan A, Jr.)</p><p><br></p><p>Order of listing:</p><p>• Head</p><p>• Spouse of the head</p><p>• Never-married children of the head/spouse, from the oldest to the youngest</p><p>• Ever-married children of the head/spouse and their families, from the oldest to the youngest</p><p>• Other relatives of the head</p><p>• Nonrelatives of the head</p><p>Last Name</p><p></p>
+      - logic: curocc() > 1
+        questionText:
+          EN: |
+            <p>1. Who are the other members of the household usually residing here as of (July 01, 2021)?<br></p><p>(Last Name, First Name Middle Initial., Suffix)<br></p><p>(eg Dela Cruz, Juan A, Jr.)</p><p><br></p><p>Order of listing:</p><p>• Head</p><p>• Spouse of the head</p><p>• Never-married children of the head/spouse, from the oldest to the youngest</p><p>• Ever-married children of the head/spouse and their families, from the oldest to the youngest</p><p>• Other relatives of the head</p><p>• Nonrelatives of the head</p><p>Last Name</p><p></p>
+  - name: FORM17_DICT.F17_A01_FIRSTNAME3
+    conditions:
+      - questionText:
+          EN: |
+            First name<p></p>
+  - name: FORM17_DICT.F17_A01_SUFF3
+    conditions:
+      - questionText:
+          EN: |
+            Suffix<p></p>
+  - name: FORM17_DICT.F17_A01_MIDNAME3
+    conditions:
+      - questionText:
+          EN: |
+            Middle name<p></p>
+  - name: FORM17_DICT.F17_A02_RELTOHHH
+    conditions:
+      - questionText:
+          EN: |
+            2. What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>’s relationship to the head of this household?<p></p>
+  - name: FORM17_DICT.F17_A03_NUCLEAR
+    conditions:
+      - questionText:
+          EN: |
+            3.&nbsp;In which nuclear family does&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;belong?<p></p>
+  - name: FORM17_DICT.F17_A04_RELTONUCFH
+    conditions:
+      - questionText:
+          EN: |
+            4. What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>’s relationship to the head of the nuclear family?<p></p>
+  - name: FORM17_DICT.F17_A05_SEX
+    conditions:
+      - questionText:
+          EN: |
+            5.&nbsp;Is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;male&nbsp;<p></p>
+  - name: FORM17_DICT.F17_A06_BIRTHDAY
+    conditions:
+      - questionText:
+          EN: |
+            6.&nbsp;In what month, day and year was&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;born?<p></p>
+  - name: FORM17_DICT.F17_A07_AGE
+    conditions:
+      - questionText:
+          EN: |
+            7.&nbsp;What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s age as of last birthday as of <b>July 01, 2022</b>?<p></p>
 ...
