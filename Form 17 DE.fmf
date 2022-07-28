@@ -65,6 +65,20 @@ Item=F17_HSN
   
 [EndForm]
   
+[Form]
+Name=FORM003
+Label=D. HOUSING
+QuestionTextHeight=196
+Level=1
+Size=1297,108
+  
+Item=F17_R01_BUILDING
+Item=F17_R01_BUILDOTH
+Item=F17_R03_ROOF
+Item=F17_R03_OTHERS
+  
+[EndForm]
+  
 [Level]
 Name=FORM17_LEVEL
 Label=Form17 Level
@@ -418,6 +432,68 @@ Form=3
 [Text]
 Position=69,383,197,399
 Text=Number of Female/s
+ 
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=GROUP005
+Label=D. HOUSING
+Form=4
+Max=1
+  
+[Field]
+Name=F17_R01_BUILDING
+Position=312,29,327,49
+Item=F17_R01_BUILDING,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=29,32,283,48
+Text=Type of building occupied by household
+ 
+  
+[Field]
+Name=F17_R01_BUILDOTH
+Position=691,29,941,49
+Item=F17_R01_BUILDOTH,FORM17_DICT
+FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=4
+  
+[Text]
+Position=353,32,659,48
+Text=Type of building occupied by household, specify
+ 
+  
+[Field]
+Name=F17_R03_ROOF
+Position=477,61,492,81
+Item=F17_R03_ROOF,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=4
+  
+[Text]
+Position=27,64,445,80
+Text=Main construction material of the roof of this building/housing unit
+ 
+  
+[Field]
+Name=F17_R03_OTHERS
+Position=1022,63,1272,83
+Item=F17_R03_OTHERS,FORM17_DICT
+FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=4
+  
+[Text]
+Position=517,66,987,82
+Text=Main construction material of the roof of this building/housing unit, specify
  
 [EndGroup]
   
