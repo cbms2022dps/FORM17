@@ -410,13 +410,13 @@ Text=Number of Males/s
   
 [Field]
 Name=F17_NUM_FEMALE
-Position=241,380,270,400
+Position=243,380,272,400
 Item=F17_NUM_FEMALE,FORM17_DICT
 DataCaptureType=TextBox
 Form=3
   
 [Text]
-Position=67,383,195,399
+Position=69,383,197,399
 Text=Number of Female/s
  
 [EndGroup]
