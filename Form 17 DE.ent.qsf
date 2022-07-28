@@ -26,5 +26,79 @@ styles:
     css: |
       font-family: Arial;font-size: 18px;
 questions:
-  []
+  - name: FORM17_DICT.F17_R01_BUILDING
+    conditions:
+      - questionText:
+          EN: |
+            <p>1. What is the type of building occupied by your household?</p><p>ANSWER THROUGH OBSERVATION. IF&nbsp;<br></p><p>DOUBTFUL, ASK THE RESPONDENT.</p><p></p>
+  - name: FORM17_DICT.F17_R01_BUILDOTH
+    conditions:
+      - questionText:
+          EN: |
+            1. What is the type of building occupied by your household?<div><br></div><div>OTHER TYPES OF BUILDING (E.G. BUS/TRAILER,BOAT, TENT), SPECIFY:__________</div><p></p>
+  - name: FORM17_DICT.F17_R03_ROOF
+    conditions:
+      - questionText:
+          EN: |
+            2. What is the main construction material of the roof of this building/housing unit?<div><br></div><div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><p></p>
+  - name: FORM17_DICT.F17_R03_OTHERS
+    conditions:
+      - questionText:
+          EN: |
+            2. What is the main construction material of the roof of this building/housing unit?<div><br></div><div>9 Others, specify ______</div><p></p>
+  - name: FORM17_DICT.F17_R04_WALLS
+    conditions:
+      - questionText:
+          EN: |
+            3. What is the construction material of the outer walls of this building?<div><br></div><div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><p></p>
+  - name: FORM17_DICT.F17_R04_WALLSOTH
+    conditions:
+      - questionText:
+          EN: |
+            3. What is the construction material of the outer walls of this building?<div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><div><br></div><div>99 OTHERS, SPECIFY: ___________</div><p></p>
+  - name: FORM17_DICT.F17_R06_MFLOOR
+    conditions:
+      - questionText:
+          EN: |
+            4.&nbsp;What is the main construction material of the floor of this housing unit?<p></p>
+  - name: FORM17_DICT.F17_R06_MFLOOROTH
+    conditions:
+      - questionText:
+          EN: |
+            4. What is the main construction material of the floor of this housing unit?<div><br></div><div>9 OTHERS, SPECIFY: ___________</div><p></p>
+  - name: FORM17_DICT.F17_R09_BROOM
+    conditions:
+      - questionText:
+          EN: |
+            5.&nbsp;How many bedrooms does this housing unit have?<p></p>
+  - name: FORM17_DICT.F17_R10_TENURE
+    conditions:
+      - questionText:
+          EN: |
+            6.&nbsp;What is the tenure status of the housing unit and lot occupied by your household?<p></p>
+  - name: FORM17_DICT.F17_R12_ELCTRCTY
+    conditions:
+      - questionText:
+          EN: |
+            7.&nbsp;Is there any electricity in the dwelling place?<p></p>
+  - name: FORM17_DICT.F17_Q01_MSWATER
+    conditions:
+      - questionText:
+          EN: |
+            8.&nbsp;What is your household's main source of water supply?<p></p>
+  - name: FORM17_DICT.F17_Q01A_MSWATER
+    conditions:
+      - questionText:
+          EN: |
+            8. What is your household's main source of water supply?<div><br></div><div>99 Others, specify _______</div><p></p>
+  - name: FORM17_DICT.F17_Q03_WDRINK
+    conditions:
+      - questionText:
+          EN: |
+            9. What is the main source of drinking water used by members of your household?<div><br></div><div>If unclear, probe to identify the place from which members&nbsp; of this household most often collect drinking water (collection point)</div><p></p>
+  - name: FORM17_DICT.F17_Q03A_WDRINK
+    conditions:
+      - questionText:
+          EN: |
+            9. What is the main source of drinking water used by members of your household?<div><br></div><div>If unclear, probe to identify the place from which members&nbsp; of this household most often collect drinking water (collection point)</div><div><br></div><div>99 OTHERS, SPECIFY _________</div><p></p>
 ...
