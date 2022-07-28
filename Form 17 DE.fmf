@@ -208,7 +208,8 @@ Max=1
 Name=F17_DATE1
 Position=506,52,619,72
 Item=F17_DATE1,FORM17_DICT
-DataCaptureType=TextBox
+DataCaptureType=Date
+CaptureDateFormat=MMDDYYYY
 Form=2
   
 [Text]
@@ -277,7 +278,8 @@ Max=1
 Name=F17_DATE2
 Position=217,21,330,41
 Item=F17_DATE2,FORM17_DICT
-DataCaptureType=TextBox
+DataCaptureType=Date
+CaptureDateFormat=MMDDYYYY
 Form=3
   
 [Text]
@@ -437,18 +439,6 @@ Text=Middle name
  
   
 [Field]
-Name=F17_NUM_MEMBERS
-Position=241,320,270,340
-Item=F17_NUM_MEMBERS,FORM17_DICT
-DataCaptureType=TextBox
-Form=3
-  
-[Text]
-Position=67,323,231,339
-Text=Total Number of Members
- 
-  
-[Field]
 Name=F17_NUM_MALE
 Position=242,349,271,369
 Item=F17_NUM_MALE,FORM17_DICT
@@ -471,6 +461,46 @@ Form=3
 Position=69,383,197,399
 Text=Number of Female/s
  
+  
+[Field]
+Name=F17_NUM_MEMBERS
+Position=241,320,270,340
+Item=F17_NUM_MEMBERS,FORM17_DICT
+DataCaptureType=TextBox
+Form=3
+  
+[Text]
+Position=67,323,231,339
+Text=Total Number of Members
+ 
+[Block]
+Name=BLOCK001
+Label=Reinterview and ID
+DisplayTogether=Yes
+Position=0
+Length=4
+  
+[Block]
+Name=BLOCK002
+Label=Name of Respondent
+DisplayTogether=Yes
+Position=5
+Length=3
+  
+[Block]
+Name=BLOCK003
+Label=Name of Last Interviewed
+DisplayTogether=Yes
+Position=12
+Length=3
+  
+[Block]
+Name=BLOCK004
+Label=Number of Members
+DisplayTogether=Yes
+Position=16
+Length=3
+  
 [EndGroup]
   
 [Group]

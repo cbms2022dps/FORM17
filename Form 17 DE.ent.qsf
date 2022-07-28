@@ -101,4 +101,139 @@ questions:
       - questionText:
           EN: |
             9. What is the main source of drinking water used by members of your household?<div><br></div><div>If unclear, probe to identify the place from which members&nbsp; of this household most often collect drinking water (collection point)</div><div><br></div><div>99 OTHERS, SPECIFY _________</div><p></p>
+  - name: FORM17_DICT.F17_REG_PSGC
+    conditions:
+      - questionText:
+          EN: |
+            <p style="text-align: center; "><b>Region</b></p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_PROV_PSGC
+    conditions:
+      - questionText:
+          EN: |
+            <p style="text-align: center; "><b>Province</b></p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_CITY_MUN_PSGC
+    conditions:
+      - questionText:
+          EN: |
+            <p style="text-align: center; "><b>City/Municipality</b></p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_BRGY_PSGC
+    conditions:
+      - questionText:
+          EN: |
+            <p style="text-align: center; "><b>Barangay</b></p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_EAN
+    conditions:
+      - questionText:
+          EN: |
+            <p style="text-align: center; "><b>Enumeration Area Number</b></p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_DATE1
+    conditions:
+      - questionText:
+          EN: |
+            Date of Spotcheck :&nbsp;<p></p>
+  - name: FORM17_DICT.F17_I01_STICKER
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>THROUGH OBSERVATION, VERIFY THE FOLLOWING:</b></p><p>1. Is there a CBMS sticker posted on the building/housing unit/service facility?<p></p></p>
+  - name: FORM17_DICT.F17_I02_BHH
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>THROUGH OBSERVATION, VERIFY THE FOLLOWING:</b></p><p>2. Are the <b>BSN</b>, <b>HUSN</b> and <b>HSN </b>correctly written on the sticker?</p><p></p>
+  - name: FORM17_DICT.F17_I02A_SPECIMP
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>THROUGH OBSERVATION, VERIFY THE FOLLOWING:</b></p><p>2. Specify</p><p></p>
+  - name: FORM17_DICT.F17_I03_XMARK
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>THROUGH OBSERVATION, VERIFY THE FOLLOWING:</b></p><p>3. Is there an "<b>X</b>" mark for callback on the sticker?</p><p></p>
+  - name: FORM17_DICT.F17_DATE2
+    conditions:
+      - questionText:
+          EN: |
+            Date of Reinterview :&nbsp;<p></p>
+  - name: FORM17_DICT.F17_BSN
+    conditions:
+      - questionText:
+          EN: |
+            <div style="text-align: center;">Building Serial Number<b> (BSN)</b></div>
+  - name: FORM17_DICT.F17_HUSN
+    conditions:
+      - questionText:
+          EN: |
+            <div style="text-align: center;">Housing Unit Serial Number <b>(HUSN)</b></div><p></p>
+  - name: FORM17_DICT.F17_HSN
+    conditions:
+      - questionText:
+          EN: |
+            <div style="text-align: center;">Household Serial Number<b> (HSN)</b></div><p></p>
+  - name: BLOCK002
+    conditions:
+      - questionText:
+          EN: |
+            
+  - name: FORM17_DICT.F17_A01_LSTNAME
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>ASK THE RESPONDENT THE FOLLOWING QUESTIONS:</b><br></p><p>1. What is your name?</p><p></p><p>Last name</p><p></p>
+  - name: FORM17_DICT.F17_A01_FIRSTNAME
+    conditions:
+      - questionText:
+          EN: |
+            <p>First name</p><p><p></p></p>
+  - name: FORM17_DICT.F17_A01_MIDNAME
+    conditions:
+      - questionText:
+          EN: |
+            <p>Middle name</p><p><p></p></p>
+  - name: FORM17_DICT.F17_II02_ADDRESS
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>ASK THE RESPONDENT THE FOLLOWING QUESTIONS:</b><br></p><p>2. What is your address?</p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_II03_CBMSENVISIT
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>ASK THE RESPONDENT THE FOLLOWING QUESTIONS:</b><br></p><p>3. Did a CBMS Enumerator visit you?</p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_II04_ENVISITHH
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>ASK THE RESPONDENT THE FOLLOWING QUESTIONS:</b><br></p><p>4. When did the enumerator visit your household?</p><p></p><p></p><p></p>
+  - name: FORM17_DICT.F17_A01_LSTNAME2
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>ASK THE RESPONDENT THE FOLLOWING QUESTIONS:</b></p><p>5. Who was interviewed during that visit?</p><p>Last name</p><p></p><p></p>
+  - name: FORM17_DICT.F17_A01_FIRSTNAME2
+    conditions:
+      - questionText:
+          EN: |
+            <p>First name</p><p><p></p></p>
+  - name: FORM17_DICT.F17_A01_MIDNAME2
+    conditions:
+      - questionText:
+          EN: |
+            <p>Middle name</p><p><p></p></p>
+  - name: FORM17_DICT.F17_NUM_MALE
+    conditions:
+      - questionText:
+          EN: |
+            <p><b>ASK THE RESPONDENT THE FOLLOWING QUESTIONS:</b></p><p>6. How many members are there in your household as of&nbsp;<b>July 01, 2022</b>?</p><p>Male</p><p></p>
+  - name: FORM17_DICT.F17_NUM_FEMALE
+    conditions:
+      - questionText:
+          EN: |
+            <p>Female</p><p><p></p></p>
+  - name: FORM17_DICT.F17_NUM_MEMBERS
+    conditions:
+      - questionText:
+          EN: |
+            <p>Total</p><p></p><p></p><p></p>
 ...
