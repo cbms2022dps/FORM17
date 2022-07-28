@@ -1,0 +1,25 @@
+﻿[CSPro Application]
+Version=CSPro 7.7
+Label=FORM_17_DE
+Name=FORM_17_DE
+AppType=DataEntry
+OperatorID=No
+PartialSave=Yes
+CAPI=Yes
+CreateListing=No
+CreateLog=No
+NotesDeleteOtherOperators=No
+NotesEditOtherOperators=No
+ShowFieldLabels=No
+ShowErrorMessageNumbers=No
+ShowRefusals=No
+[AppCode]
+File=.\Form 17 DE.ent.apc
+[Message]
+File=.\Form 17 DE.ent.mgf
+[Help]
+File=.\Form 17 DE.ent.qsf
+[Forms]
+File=.\Form 17 DE.fmf
+[Dictionary Types]
+Dict-Type=.\Form17.dcf,Input,.\Form 17 DE.fmf
