@@ -235,15 +235,16 @@ Label=II. REINTERVIEW RECORD
 Form=3
 Max=1
   
+  
 [Field]
 Name=F17_DATE2
-Position=217,21,330,41
+Position=217,25,330,45
 Item=F17_DATE2,FORM17_DICT
 DataCaptureType=TextBox
 Form=3
   
 [Text]
-Position=65,24,190,40
+Position=65,28,190,44
 Text=Date of Reinterview
  
   
@@ -282,6 +283,7 @@ Form=3
 Position=665,74,828,90
 Text=Household Serial Number
  
+  
   
 [Field]
 Name=F17_A01_LSTNAME
@@ -359,6 +361,7 @@ Position=67,235,369,251
 Text=When did the enumerator visit your household?
  
   
+  
 [Field]
 Name=F17_A01_LSTNAME2
 Position=154,271,404,291
@@ -398,6 +401,7 @@ Position=853,280,936,296
 Text=Middle name
  
   
+  
 [Field]
 Name=F17_NUM_MEMBERS
 Position=241,320,270,340
@@ -433,6 +437,34 @@ Form=3
 Position=69,383,197,399
 Text=Number of Female/s
  
+[Block]
+Name=BLOCK001
+Label=Reinterview and ID
+DisplayTogether=Yes
+Position=0
+Length=4
+  
+[Block]
+Name=BLOCK002
+Label=Name of Respondent
+DisplayTogether=Yes
+Position=5
+Length=3
+  
+[Block]
+Name=BLOCK003
+Label=Name of Last Interviewed
+DisplayTogether=Yes
+Position=12
+Length=3
+  
+[Block]
+Name=BLOCK004
+Label=Number of Members
+DisplayTogether=Yes
+Position=16
+Length=3
+  
 [EndGroup]
   
 [Group]
