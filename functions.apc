@@ -1,0 +1,8 @@
+﻿{Functions HERE}
+
+function numeric pangFormat(numeric toFormat)
+	string bDay = edit("99999999", toFormat);
+	string dateFormatted = concat(bDay[5:4], bDay[1:2], bDay[3:2]);
+	numeric bDayFormatted = tonumber(dateFormatted);
+pangFormat = bDayFormatted;
+end;

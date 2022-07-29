@@ -83,7 +83,7 @@ Name=FORM005
 Label=EDUCATION, ECONOMIC AND HEALTH INSURANCE
 QuestionTextHeight=196
 Level=1
-Size=750,510
+Size=1764,510
   
 Item=F17_C02_HGCLEVEL000
   
@@ -534,6 +534,7 @@ Required=Yes
 Type=Record
 TypeName=DEMO_CHAR
 Max=35
+MaxField=F17_NUM_MEMBERS
 DisplaySize=19,60,1309,412
 Orientation=Horizontal
 FieldRowHeight=0
@@ -759,25 +760,6 @@ Text=First name
 [EndColumn]
   
 [Column]
-Width=69
-  
-[HeaderText]
-Position=24,48,69,72
-Text=Suffix
- 
-[Field]
-Name=F17_A01_SUFF3
-Position=0,0,61,20
-Item=F17_A01_SUFF3,FORM17_DICT
-UseUnicodeTextBox=Yes
-DataCaptureType=TextBox
-  
-[Text]
-Text=Suffix
- 
-[EndColumn]
-  
-[Column]
 Width=217
   
 [HeaderText]
@@ -793,6 +775,25 @@ DataCaptureType=TextBox
   
 [Text]
 Text=Middle name
+ 
+[EndColumn]
+  
+[Column]
+Width=69
+  
+[HeaderText]
+Position=24,48,69,72
+Text=Suffix
+ 
+[Field]
+Name=F17_A01_SUFF3
+Position=0,0,61,20
+Item=F17_A01_SUFF3,FORM17_DICT
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+  
+[Text]
+Text=Suffix
  
 [EndColumn]
   
@@ -906,6 +907,13 @@ Text=Age as of last birthday as of July 01, 2022?
  
 [EndColumn]
   
+[Block]
+Name=BLOCK005
+Label=Member Name
+DisplayTogether=Yes
+Position=0
+Length=4
+  
 [EndGrid]
  
 [EndGroup]
@@ -925,7 +933,8 @@ Required=Yes
 Type=Record
 TypeName=DEMO_CHAR
 Max=35
-DisplaySize=44,69,725,485
+MaxField=F17_NUM_MEMBERS
+DisplaySize=44,69,1739,485
 Orientation=Horizontal
 FieldRowHeight=0
 HeadingRowHeight=0
@@ -1234,6 +1243,150 @@ DataCaptureType=RadioButton
   
 [Text]
 Text=Did have a job or business during the past week?
+ 
+[EndColumn]
+  
+[Column]
+Width=95
+  
+[HeaderText]
+Position=0,96,95,136
+Text=Nature of employment?
+ 
+[Field]
+Name=F17_E11_EMPLOY
+Position=72,0,87,20
+Item=F17_E11_EMPLOY,FORM17_DICT
+DataCaptureType=RadioButton
+  
+[Text]
+Text=Nature of employment?
+ 
+[EndColumn]
+  
+[Column]
+Width=98
+  
+[HeaderText]
+Position=0,48,98,136
+Text=Normal working hours per day during the past week?
+ 
+[Field]
+Name=F17_E12_PWHRS
+Position=61,0,90,20
+Item=F17_E12_PWHRS,FORM17_DICT
+DataCaptureType=TextBox
+  
+[Text]
+Text=Normal working hours per day during the past week?
+ 
+[EndColumn]
+  
+[Column]
+Width=96
+  
+[HeaderText]
+Position=0,48,96,136
+Text=Total number of hours worked during the past week
+ 
+[Field]
+Name=F17_E14_PWTOTHRS
+Position=45,0,88,20
+Item=F17_E14_PWTOTHRS,FORM17_DICT
+DataCaptureType=TextBox
+  
+[Text]
+Text=Total number of hours worked during the past week
+ 
+[EndColumn]
+  
+[Column]
+Width=98
+  
+[HeaderText]
+Position=0,64,98,136
+Text=Want more hours of work during the past week
+ 
+[Field]
+Name=F17_E15_PWMORHRS
+Position=75,0,90,20
+Item=F17_E15_PWMORHRS,FORM17_DICT
+DataCaptureType=RadioButton
+  
+[Text]
+Text=Want more hours of work during the past week
+ 
+[EndColumn]
+  
+[Column]
+Width=96
+  
+[HeaderText]
+Position=0,64,96,136
+Text=Look for additional work during the past week
+ 
+[Field]
+Name=F17_E16_PWADDWORK
+Position=73,0,88,20
+Item=F17_E16_PWADDWORK,FORM17_DICT
+DataCaptureType=RadioButton
+  
+[Text]
+Text=Look for additional work during the past week
+ 
+[EndColumn]
+  
+[Column]
+Width=61
+  
+[HeaderText]
+Position=0,96,61,136
+Text=Class of worker
+ 
+[Field]
+Name=F17_E18_CLASS
+Position=38,0,53,20
+Item=F17_E18_CLASS,FORM17_DICT
+DataCaptureType=RadioButton
+  
+[Text]
+Text=Class of worker
+ 
+[EndColumn]
+  
+[Column]
+Width=209
+  
+[HeaderText]
+Position=0,96,209,136
+Text=Dependent/beneficiary/member of Philhealth
+ 
+[Field]
+Name=F17_P01G_PHLHEALTH
+Position=186,0,201,20
+Item=F17_P01G_PHLHEALTH,FORM17_DICT
+DataCaptureType=RadioButton
+  
+[Text]
+Text=Dependent/beneficiary/member of Philhealth
+ 
+[EndColumn]
+  
+[Column]
+Width=209
+  
+[HeaderText]
+Position=0,80,209,136
+Text=Dependent/beneficiary/member of Health/ Medical Insurance other than Philhealth
+ 
+[Field]
+Name=F17_P01D_MEDINSURE
+Position=186,0,201,20
+Item=F17_P01D_MEDINSURE,FORM17_DICT
+DataCaptureType=RadioButton
+  
+[Text]
+Text=Dependent/beneficiary/member of Health/ Medical Insurance other than Philhealth
  
 [EndColumn]
   

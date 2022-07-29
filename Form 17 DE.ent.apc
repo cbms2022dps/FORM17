@@ -3,6 +3,174 @@ PROC GLOBAL
 
 PROC FORM17_FF
 
+PROC F17_NUM_MEMBERS
+preproc
+$ = F17_NUM_MALE + F17_NUM_FEMALE;
+
+postproc
+if $ <> (F17_NUM_FEMALE + F17_NUM_MALE) then
+	errmsg("Total hh members <> total male and female");
+	reenter;
+endif;
+
+savepartial();
 PROC F17_A01_MIDNAME3
 postproc
 	setocclabel(F17_A01_LSTNAME3000, concat(strip(F17_A01_LSTNAME3(curocc())), ",", " ", strip(F17_A01_FIRSTNAME3(curocc()))));
+PROC F17_A02_RELTOHHH
+preproc
+if curocc() = 1 then
+	setvalueset($, F17_A02_RELTOHHH_VS1);
+	$ = 1;
+else
+	setvalueset($, F17_A02_RELTOHHH_VS2);
+endif;
+PROC F17_A03_NUCLEAR
+preproc
+if curocc() = 1 then
+	setvalueset($, F17_A03_NUCLEAR_VS1);
+	$ = 1;
+else
+	setvalueset($, F17_A03_NUCLEAR_VS2);
+endif;
+PROC F17_A04_RELTONUCFH
+preproc
+if F17_NUM_MEMBERS = 1 then
+	$ = 0;
+endif;
+
+postproc
+numeric C_Head = count($ where $ = 1);
+if $ = 1 and C_Head > 1 then
+	errmsg("More than 1 Family Head!")
+	select("Change relationship to head of nuclear family", $(curocc()), "Force and continue", next );
+endif;
+
+if F17_NUM_MEMBERS > 1 and $ = 0 then
+	errmsg("Cannot be One Man hh if member count is more than 1!");
+	reenter;
+elseif F17_NUM_MEMBERS = 1 and $ <> 0 then
+	errmsg("One man hh only if member count is 1!");
+	reenter;
+endif;
+PROC F17_A06_BIRTHDAY
+postproc
+if $ = notappl then
+	errmsg("Must have entry!");
+	reenter;
+else
+	if not pangFormat($) in 18970101:sysdate("YYYYMMDD") then
+		errmsg("Invalid date of birth");
+		reenter;
+	endif;
+endif;
+
+savepartial();
+PROC F17_A07_AGE
+preproc
+$ = datediff(pangFormat(F17_A06_BIRTHDAY),sysdate("YYYYMMDD"),"y");
+
+postproc
+if $ < 15 and F17_A02_RELTOHHH = 1 then
+	errmsg("The hh head must be 15 years old and above!");
+elseif $ = notappl then
+	errmsg("Must have entry!");
+	reenter;
+else
+    if F17_A06_BIRTHDAY > 20220701 then
+		errmsg("Birthday should not be beyond July 1, 2022 to be included as hh member");
+		reenter;
+	endif;
+endif;
+PROC F17_C02_HGCLEVEL
+preproc
+	setocclabel(F17_C02_HGCLEVEL000, concat(strip(F17_A01_LSTNAME3(curocc())), ",", " ", strip(F17_A01_FIRSTNAME3(curocc()))));
+PROC F17_C02_HGC
+preproc
+ask if F17_A07_AGE(curocc()) >= 5;
+
+if F17_C02_HGCLEVEL = 0 then
+	setvalueset($, F17_C02_HGC_VS1);
+elseif F17_C02_HGCLEVEL = 1 then
+	setvalueset($, F17_C02_HGC_VS2);
+elseif F17_C02_HGCLEVEL = 2 then
+	setvalueset($, F17_C02_HGC_VS3);
+elseif F17_C02_HGCLEVEL = 3 then
+	setvalueset($, F17_C02_HGC_VS4);
+elseif F17_C02_HGCLEVEL = 4 then
+	setvalueset($, F17_C02_HGC_VS5);
+elseif F17_C02_HGCLEVEL = 5 then
+	setvalueset($, F17_C02_HGC_VS6);
+elseif F17_C02_HGCLEVEL = 6 then
+	setvalueset($, F17_C02_HGC_VS7);
+elseif F17_C02_HGCLEVEL = 7 then
+	setvalueset($, F17_C02_HGC_VS8);
+elseif F17_C02_HGCLEVEL = 8 then
+	setvalueset($, F17_C02_HGC_VS9);
+endif;
+PROC F17_C02_HGC_SPECIFY
+preproc
+ask if F17_C02_HGC in 49998, 59998, 69998, 79998, 89998;
+
+if F17_C02_HGC = 49998 then
+	setvalueset($, F17_C02_HGC_SPECIFY_VS1);
+elseif F17_C02_HGC = 59998 then
+	setvalueset($, F17_C02_HGC_SPECIFY_VS1);
+elseif F17_C02_HGC = 69998 then
+	setvalueset($, F17_C02_HGC_SPECIFY_VS1);
+elseif F17_C02_HGC = 79998 then
+	setvalueset($, F17_C02_HGC_SPECIFY_VS1);
+elseif F17_C02_HGC = 89998 then
+	setvalueset($, F17_C02_HGC_SPECIFY_VS1);
+endif;
+PROC F17_C03_CURATTEND
+preproc
+ask if F17_A07_AGE(curocc()) in 3:24;
+
+postproc
+savepartial();
+PROC F17_B06_OFI
+preproc
+ask if F17_A07_AGE(curocc()) >= 15;
+
+if F17_A07_AGE(curocc()) < 15 then
+	$ = 7;
+endif;
+PROC F17_E01_WORK
+preproc
+ask if F17_A07_AGE(curocc()) >= 5;
+
+postproc
+if $ = 1 then
+	skip to F17_E11_EMPLOY(curocc());
+endif;
+PROC F17_E03_JOBBUS
+preproc
+ask if F17_A07_AGE(curocc()) >= 5;
+
+postproc
+if $ in 2:3 then
+	skip to F17_P01G_PHLHEALTH(curocc());
+endif;
+PROC F17_E11_EMPLOY
+preproc
+ask if F17_A07_AGE(curocc()) >= 15;
+PROC F17_E12_PWHRS
+preproc
+ask if F17_A07_AGE(curocc()) >= 15;
+
+if F17_A07_AGE(curocc()) < 15 then
+	$ = 7;
+endif;
+PROC F17_E14_PWTOTHRS
+preproc
+ask if F17_A07_AGE(curocc()) >= 15;
+PROC F17_E15_PWMORHRS
+preproc
+ask if F17_A07_AGE(curocc()) >= 15;
+PROC F17_E16_PWADDWORK
+preproc
+ask if F17_A07_AGE(curocc()) >= 15;
+PROC F17_E18_CLASS
+preproc
+ask if F17_A07_AGE(curocc()) >= 15;

@@ -51,16 +51,16 @@ questions:
       - questionText:
           EN: |
             <p style="text-align: center; "><b>Enumeration Area Number</b></p><p></p><p></p><p></p>
-  - name: FORM17_DICT.F17_EC
-    conditions:
-      - questionText:
-          EN: |
-            <div style="text-align: center;"><b>Enumerator Code</b></div><p></p>
   - name: FORM17_DICT.F17_NOE
     conditions:
       - questionText:
           EN: |
             <div style="text-align: center;"><b>Name of Enumerator</b></div><p></p>
+  - name: FORM17_DICT.F17_EC
+    conditions:
+      - questionText:
+          EN: |
+            <div style="text-align: center;"><b>Enumerator Code</b></div><p></p>
   - name: FORM17_DICT.F17_DATE1
     conditions:
       - questionText:
@@ -80,7 +80,7 @@ questions:
     conditions:
       - questionText:
           EN: |
-            <p><b>THROUGH OBSERVATION, VERIFY THE FOLLOWING:</b></p><p>2. Specify</p><p></p>
+            <p><b>THROUGH OBSERVATION, VERIFY THE FOLLOWING:</b></p><p>2a. Specify need for improvement</p><p></p>
   - name: FORM17_DICT.F17_I03_XMARK
     conditions:
       - questionText:
@@ -226,4 +226,79 @@ questions:
       - questionText:
           EN: |
             7.&nbsp;What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s age as of last birthday as of <b>July 01, 2022</b>?<p></p>
+  - name: FORM17_DICT.F17_C02_HGCLEVEL
+    conditions:
+      - questionText:
+          EN: |
+            <p>8.&nbsp;What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s highest grade completed?<br></p><p></p>
+  - name: FORM17_DICT.F17_C02_HGC
+    conditions:
+      - questionText:
+          EN: |
+            8.&nbsp;What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s highest grade completed?<p></p>
+  - name: FORM17_DICT.F17_C02_HGC_SPECIFY
+    conditions:
+      - questionText:
+          EN: |
+            <p>8.&nbsp;What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s highest grade completed?</p><p><p>Specify</p></p>
+  - name: FORM17_DICT.F17_C03_CURATTEND
+    conditions:
+      - questionText:
+          EN: |
+            9.&nbsp;Is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;currently attending school?<p></p>
+  - name: FORM17_DICT.F17_B06_OFI
+    conditions:
+      - questionText:
+          EN: |
+            <p>1. Is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;an Overseas Filipino?&nbsp;</p><p>(as of <b>01 July 2022</b>)</p><p>Overseas Filipino Indicator</p><p></p>
+  - name: FORM17_DICT.F17_E01_WORK
+    conditions:
+      - questionText:
+          EN: |
+            2. Did&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;do any work for at least one (1) hour, including work from home or telecommuting, during the past week?<p></p>
+  - name: FORM17_DICT.F17_E03_JOBBUS
+    conditions:
+      - questionText:
+          EN: |
+            3.&nbsp;Although&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;did not work, did&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;have a job or business during the past week?<p></p>
+  - name: FORM17_DICT.F17_E11_EMPLOY
+    conditions:
+      - questionText:
+          EN: |
+            4.&nbsp;What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s nature of employment?<p></p>
+  - name: FORM17_DICT.F17_E12_PWHRS
+    conditions:
+      - questionText:
+          EN: |
+            5.&nbsp;What was&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s normal working hours per day during the past week?<p></p>
+  - name: FORM17_DICT.F17_E14_PWTOTHRS
+    conditions:
+      - questionText:
+          EN: |
+            6. What was&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s total number of hours worked during the past week?<p></p>
+  - name: FORM17_DICT.F17_E15_PWMORHRS
+    conditions:
+      - questionText:
+          EN: |
+            7.&nbsp;Did&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;want more hours of work during the past week?<p></p>
+  - name: FORM17_DICT.F17_E16_PWADDWORK
+    conditions:
+      - questionText:
+          EN: |
+            8. Did&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;look for additional work during the past week?<p></p>
+  - name: FORM17_DICT.F17_E18_CLASS
+    conditions:
+      - questionText:
+          EN: |
+            9. What is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>'s class of worker?<p></p>
+  - name: FORM17_DICT.F17_P01G_PHLHEALTH
+    conditions:
+      - questionText:
+          EN: |
+            10. Is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;a dependent/beneficiary/member of Philhealth?<p></p>
+  - name: FORM17_DICT.F17_P01D_MEDINSURE
+    conditions:
+      - questionText:
+          EN: |
+            11. Is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;a dependent/beneficiary/member of Health/ Medical Insurance other than Philhealth?<p></p>
 ...

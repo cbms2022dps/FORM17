@@ -15,6 +15,7 @@ ShowErrorMessageNumbers=No
 ShowRefusals=No
 [AppCode]
 File=.\Form 17 DE.ent.apc
+Include=.\functions.apc
 [Message]
 File=.\Form 17 DE.ent.mgf
 [Help]
