@@ -186,16 +186,16 @@ questions:
       - questionText:
           EN: |
             First name<p></p>
-  - name: FORM17_DICT.F17_A01_SUFF3
-    conditions:
-      - questionText:
-          EN: |
-            Suffix<p></p>
   - name: FORM17_DICT.F17_A01_MIDNAME3
     conditions:
       - questionText:
           EN: |
             Middle name<p></p>
+  - name: FORM17_DICT.F17_A01_SUFF3
+    conditions:
+      - questionText:
+          EN: |
+            Suffix<p></p>
   - name: FORM17_DICT.F17_A02_RELTOHHH
     conditions:
       - questionText:
@@ -301,4 +301,229 @@ questions:
       - questionText:
           EN: |
             11. Is&nbsp;<b><font color="#085294">~~getocclabel()~~</font></b>&nbsp;a dependent/beneficiary/member of Health/ Medical Insurance other than Philhealth?<p></p>
+  - name: FORM17_DICT.F17_R01_BUILDING
+    conditions:
+      - questionText:
+          EN: |
+            <p>1. What is the type of building occupied by your household?</p><p>ANSWER THROUGH OBSERVATION. IF&nbsp;<br></p><p>DOUBTFUL, ASK THE RESPONDENT.</p><p></p>
+  - name: FORM17_DICT.F17_R01_BUILDOTH
+    conditions:
+      - questionText:
+          EN: |
+            1. What is the type of building occupied by your household?<div><br></div><div>OTHER TYPES OF BUILDING (E.G. BUS/TRAILER,BOAT, TENT), SPECIFY:__________</div><p></p>
+  - name: FORM17_DICT.F17_R03_ROOF
+    conditions:
+      - questionText:
+          EN: |
+            2. What is the main construction material of the roof of this building/housing unit?<div><br></div><div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><p></p>
+  - name: FORM17_DICT.F17_R03_OTHERS
+    conditions:
+      - questionText:
+          EN: |
+            2. What is the main construction material of the roof of this building/housing unit?<div><br></div><div>9 Others, specify ______</div><p></p>
+  - name: FORM17_DICT.F17_R04_WALLS
+    conditions:
+      - questionText:
+          EN: |
+            3. What is the construction material of the outer walls of this building?<div><br></div><div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><p></p>
+  - name: FORM17_DICT.F17_R04_WALLSOTH
+    conditions:
+      - questionText:
+          EN: |
+            3. What is the construction material of the outer walls of this building?<div>ANSWER THROUGH OBSERVATION. IF DOUBTFUL, ASK THE RESPONDENT.</div><div><br></div><div>99 OTHERS, SPECIFY: ___________</div><p></p>
+  - name: FORM17_DICT.F17_R06_MFLOOR
+    conditions:
+      - questionText:
+          EN: |
+            4.&nbsp;What is the main construction material of the floor of this housing unit?<p></p>
+  - name: FORM17_DICT.F17_R06_MFLOOROTH
+    conditions:
+      - questionText:
+          EN: |
+            4. What is the main construction material of the floor of this housing unit?<div><br></div><div>9 OTHERS, SPECIFY: ___________</div><p></p>
+  - name: FORM17_DICT.F17_R09_BROOM
+    conditions:
+      - questionText:
+          EN: |
+            5.&nbsp;How many bedrooms does this housing unit have?<p></p>
+  - name: FORM17_DICT.F17_R10_TENURE
+    conditions:
+      - questionText:
+          EN: |
+            6.&nbsp;What is the tenure status of the housing unit and lot occupied by your household?<p></p>
+  - name: FORM17_DICT.F17_R12_ELCTRCTY
+    conditions:
+      - questionText:
+          EN: |
+            7.&nbsp;Is there any electricity in the dwelling place?<p></p>
+  - name: FORM17_DICT.F17_Q01_MSWATER
+    conditions:
+      - questionText:
+          EN: |
+            8.&nbsp;What is your household's main source of water supply?<p></p>
+  - name: FORM17_DICT.F17_Q01A_MSWATER
+    conditions:
+      - questionText:
+          EN: |
+            8. What is your household's main source of water supply?<div><br></div><div>99 Others, specify _______</div><p></p>
+  - name: FORM17_DICT.F17_Q03_WDRINK
+    conditions:
+      - questionText:
+          EN: |
+            9. What is the main source of drinking water used by members of your household?<div><br></div><div>If unclear, probe to identify the place from which members&nbsp; of this household most often collect drinking water (collection point)</div><p></p>
+  - name: FORM17_DICT.F17_Q03A_WDRINK
+    conditions:
+      - questionText:
+          EN: |
+            9. What is the main source of drinking water used by members of your household?<div><br></div><div>If unclear, probe to identify the place from which members&nbsp; of this household most often collect drinking water (collection point)</div><div><br></div><div>99 OTHERS, SPECIFY _________</div><p></p>
+  - name: HCBLOCK1
+    conditions:
+      - questionText:
+          EN: |
+            <b>HOUSEHOLD CONVENIENCES</b><p></p>
+  - name: FORM17_DICT.F17_R16A_REF
+    conditions:
+      - questionText:
+          EN: |
+            A. REFRIGERATOR/FREEZER<p></p>
+  - name: FORM17_DICT.F17_R16B_STOVE
+    conditions:
+      - questionText:
+          EN: |
+            B. STOVE WITH OVEN/GAS RANGE<p></p>
+  - name: FORM17_DICT.F17_R16C_INDUCTIONCOOKER
+    conditions:
+      - questionText:
+          EN: |
+            C. INDUCTION COOKER<p></p>
+  - name: FORM17_DICT.F17_R16D_AIRFRYER
+    conditions:
+      - questionText:
+          EN: |
+            D. AIR FRYER<p></p>
+  - name: FORM17_DICT.F17_R16E_MOVEN
+    conditions:
+      - questionText:
+          EN: |
+            E. MICROWAVE OVEN<p></p>
+  - name: FORM17_DICT.F17_R16F_WASH
+    conditions:
+      - questionText:
+          EN: |
+            F. WASHING MACHINE<p></p>
+  - name: FORM17_DICT.F17_16G_AIRCON
+    conditions:
+      - questionText:
+          EN: |
+            G. AIR CONDITIONER<p></p>
+  - name: FORM17_DICT.F17_R16H_EFAN
+    conditions:
+      - questionText:
+          EN: |
+            H. ELECTRIC FAN AND OTHER COOLING EQUIPMENT<p></p>
+  - name: HCBLOCK2
+    conditions:
+      - questionText:
+          EN: |
+            <p></p><div><b>ICT DEVICES</b><br></div>
+  - name: FORM17_DICT.F17_R16I_RADIO
+    conditions:
+      - questionText:
+          EN: |
+            I. RADIO/RADIO CASSETTE (AM, FM, AND TRANSISTOR)<p></p>
+  - name: FORM17_DICT.F17_R16J_TV
+    conditions:
+      - questionText:
+          EN: |
+            J. TELEVISION<p></p>
+  - name: FORM17_DICT.F17_R16K_CD
+    conditions:
+      - questionText:
+          EN: |
+            K. CD/DVD/VCD PLAYER<p></p>
+  - name: FORM17_DICT.F17_R16L_AUDIO
+    conditions:
+      - questionText:
+          EN: |
+            L. AUDIO COMPONENT/STEREO SET/KARAOKE/VIDEOKE<p></p>
+  - name: FORM17_DICT.F17_R16M_LANDLINE
+    conditions:
+      - questionText:
+          EN: |
+            M. LANDLINE/WIRELESS TELEPHONE<p></p>
+  - name: FORM17_DICT.F17_R16N_MOBILE
+    conditions:
+      - questionText:
+          EN: |
+            N. PHONE<p></p>
+  - name: FORM17_DICT.F17_R16O_TABLET
+    conditions:
+      - questionText:
+          EN: |
+            O. TABLET<p></p>
+  - name: FORM17_DICT.F17_R16P_PC
+    conditions:
+      - questionText:
+          EN: |
+            P. PERSONAL COMPUTER (DESKTOP, LAPTOP, NOTEBOOK, NETBOOK, AND OTHERS)<p></p>
+  - name: HCBLOCK3
+    conditions:
+      - questionText:
+          EN: |
+            <b>VEHICLES</b><p></p>
+  - name: FORM17_DICT.F17_R16Q_CAR
+    conditions:
+      - questionText:
+          EN: |
+            Q. CAR<p></p>
+  - name: FORM17_DICT.F17_R16R_VAN
+    conditions:
+      - questionText:
+          EN: |
+            R. VAN<p></p>
+  - name: FORM17_DICT.F17_R16S_JEEP
+    conditions:
+      - questionText:
+          EN: |
+            S. JEEP<p></p>
+  - name: FORM17_DICT.F17_R16T_TRUCK
+    conditions:
+      - questionText:
+          EN: |
+            T. TRUCK<p></p>
+  - name: FORM17_DICT.F17_R16U_MOTOR
+    conditions:
+      - questionText:
+          EN: |
+            U. MOTORCYCLE/MOTOR SCOOTER<p></p>
+  - name: FORM17_DICT.F17_R16V_TRICYCLE
+    conditions:
+      - questionText:
+          EN: |
+            V. TRICYCLE<p></p>
+  - name: FORM17_DICT.F17_R16W_BIKE
+    conditions:
+      - questionText:
+          EN: |
+            W. BICYCLE<p></p>
+  - name: FORM17_DICT.F17_R16X_PEDICAB
+    conditions:
+      - questionText:
+          EN: |
+            X. PEDICAB<p></p>
+  - name: FORM17_DICT.F17_R16Y_MBOAT
+    conditions:
+      - questionText:
+          EN: |
+            Y. MOTORIZED BOAT/BANCA<p></p>
+  - name: FORM17_DICT.F17_R16Z_BOAT
+    conditions:
+      - questionText:
+          EN: |
+            Z. NON MOTORIZED BOAT/BANCA<p></p>
+  - name: FORM17_DICT.F17_N05_INETPAY
+    conditions:
+      - questionText:
+          EN: |
+            11.&nbsp;Do you or any member of your household member pay (whether prepaid or postpaid) when you access the internet?<p></p>
 ...

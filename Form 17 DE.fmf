@@ -91,15 +91,64 @@ Item=F17_C02_HGCLEVEL000
   
 [Form]
 Name=FORM003
-Label=D. HOUSING
+Label=HOUSING
 QuestionTextHeight=196
 Level=1
-Size=1300,735
+Size=874,1289
   
 Item=F17_R01_BUILDING
 Item=F17_R01_BUILDOTH
 Item=F17_R03_ROOF
 Item=F17_R03_OTHERS
+Item=F17_R04_WALLS
+Item=F17_R04_WALLSOTH
+Item=F17_R06_MFLOOR
+Item=F17_R06_MFLOOROTH
+Item=F17_R09_BROOM
+Item=F17_R10_TENURE
+Item=F17_R12_ELCTRCTY
+Item=F17_Q01_MSWATER
+Item=F17_Q01A_MSWATER
+Item=F17_Q03_WDRINK
+Item=F17_Q03A_WDRINK
+Item=F17_R16A_REF
+Item=F17_R16B_STOVE
+Item=F17_R16C_INDUCTIONCOOKER
+Item=F17_R16D_AIRFRYER
+Item=F17_R16E_MOVEN
+Item=F17_R16F_WASH
+Item=F17_16G_AIRCON
+Item=F17_R16H_EFAN
+Item=F17_R16I_RADIO
+Item=F17_R16J_TV
+Item=F17_R16K_CD
+Item=F17_R16L_AUDIO
+Item=F17_R16M_LANDLINE
+Item=F17_R16N_MOBILE
+Item=F17_R16O_TABLET
+Item=F17_R16P_PC
+Item=F17_R16Q_CAR
+Item=F17_R16R_VAN
+Item=F17_R16S_JEEP
+Item=F17_R16T_TRUCK
+Item=F17_R16U_MOTOR
+Item=F17_R16V_TRICYCLE
+Item=F17_R16W_BIKE
+Item=F17_R16X_PEDICAB
+Item=F17_R16Y_MBOAT
+Item=F17_R16Z_BOAT
+Item=F17_N05_INETPAY
+  
+[EndForm]
+  
+[Form]
+Name=FORM006
+Label=RESULT VISIT
+QuestionTextHeight=196
+Level=1
+Size=234,58
+  
+Item=F17_RESVISIT
   
 [EndForm]
   
@@ -528,7 +577,7 @@ Max=1
   
 [Grid]
 Name=F17_A01_LSTNAME3000
-Label=Last name
+Label=HOUSEHOLD MEMBERS
 Form=4
 Required=Yes
 Type=Record
@@ -927,7 +976,7 @@ Max=1
   
 [Grid]
 Name=F17_C02_HGCLEVEL000
-Label=Highest grade completed
+Label=EDUCATION
 Form=5
 Required=Yes
 Type=Record
@@ -1397,26 +1446,26 @@ Text=Dependent/beneficiary/member of Health/ Medical Insurance other than Philhe
 [Group]
 Required=Yes
 Name=GROUP005
-Label=D. HOUSING
+Label=HOUSING
 Form=6
 Max=1
   
 [Field]
 Name=F17_R01_BUILDING
-Position=312,29,327,49
+Position=599,14,614,34
 Item=F17_R01_BUILDING,FORM17_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=RadioButton
 Form=6
   
 [Text]
-Position=29,32,283,48
+Position=18,17,272,33
 Text=Type of building occupied by household
  
   
 [Field]
 Name=F17_R01_BUILDOTH
-Position=691,29,941,49
+Position=599,44,849,64
 Item=F17_R01_BUILDOTH,FORM17_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
@@ -1424,26 +1473,26 @@ DataCaptureType=TextBox
 Form=6
   
 [Text]
-Position=353,32,659,48
+Position=18,47,324,63
 Text=Type of building occupied by household, specify
  
   
 [Field]
 Name=F17_R03_ROOF
-Position=477,61,492,81
+Position=599,74,614,94
 Item=F17_R03_ROOF,FORM17_DICT
 FieldLabelType=DictionaryLabel
 DataCaptureType=RadioButton
 Form=6
   
 [Text]
-Position=27,64,445,80
+Position=18,77,436,93
 Text=Main construction material of the roof of this building/housing unit
  
   
 [Field]
 Name=F17_R03_OTHERS
-Position=1022,63,1272,83
+Position=599,104,849,124
 Item=F17_R03_OTHERS,FORM17_DICT
 FieldLabelType=DictionaryLabel
 UseUnicodeTextBox=Yes
@@ -1451,8 +1500,551 @@ DataCaptureType=TextBox
 Form=6
   
 [Text]
-Position=517,66,987,82
+Position=18,107,488,123
 Text=Main construction material of the roof of this building/housing unit, specify
+ 
+  
+[Field]
+Name=F17_R04_WALLS
+Position=599,134,628,154
+Item=F17_R04_WALLS,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=6
+  
+[Text]
+Position=18,137,366,153
+Text=Construction material of the outer walls of this building
+ 
+  
+[Field]
+Name=F17_R04_WALLSOTH
+Position=599,164,849,184
+Item=F17_R04_WALLSOTH,FORM17_DICT
+FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,167,418,183
+Text=Construction material of the outer walls of this building, specify
+ 
+  
+[Field]
+Name=F17_R06_MFLOOR
+Position=599,194,614,214
+Item=F17_R06_MFLOOR,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=6
+  
+[Text]
+Position=18,197,384,213
+Text=Main construction material of the floor of this housing unit
+ 
+  
+[Field]
+Name=F17_R06_MFLOOROTH
+Position=599,224,849,244
+Item=F17_R06_MFLOOROTH,FORM17_DICT
+FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,227,436,243
+Text=Main construction material of the floor of this housing unit, specify
+ 
+  
+[Field]
+Name=F17_R09_BROOM
+Position=599,254,642,274
+Item=F17_R09_BROOM,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,257,329,273
+Text=How many bedrooms does this housing unit have
+ 
+  
+[Field]
+Name=F17_R10_TENURE
+Position=599,284,614,304
+Item=F17_R10_TENURE,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=6
+  
+[Text]
+Position=18,287,424,303
+Text=Tenure status of the housing unit and lot occupied by household
+ 
+  
+[Field]
+Name=F17_R12_ELCTRCTY
+Position=599,314,614,334
+Item=F17_R12_ELCTRCTY,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=6
+  
+[Text]
+Position=18,317,296,333
+Text=Is there any electricity in the dwelling place
+ 
+  
+[Field]
+Name=F17_Q01_MSWATER
+Position=599,344,628,364
+Item=F17_Q01_MSWATER,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=6
+  
+[Text]
+Position=18,347,277,363
+Text=Household's main source of water supply
+ 
+  
+[Field]
+Name=F17_Q01A_MSWATER
+Position=599,374,849,394
+Item=F17_Q01A_MSWATER,FORM17_DICT
+FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,377,329,393
+Text=Household's main source of water supply, specify
+ 
+  
+[Field]
+Name=F17_Q03_WDRINK
+Position=599,404,628,424
+Item=F17_Q03_WDRINK,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=6
+  
+[Text]
+Position=18,407,409,423
+Text=Main source of drinking water used by members of household
+ 
+  
+[Field]
+Name=F17_Q03A_WDRINK
+Position=599,434,849,454
+Item=F17_Q03A_WDRINK,FORM17_DICT
+FieldLabelType=DictionaryLabel
+UseUnicodeTextBox=Yes
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,437,461,453
+Text=Main source of drinking water used by members of household, specify
+ 
+  
+  
+[Field]
+Name=F17_R16A_REF
+Position=599,464,628,484
+Item=F17_R16A_REF,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,467,193,483
+Text=A REFRIGERATOR/FREEZER
+ 
+  
+[Field]
+Name=F17_R16B_STOVE
+Position=599,494,628,514
+Item=F17_R16B_STOVE,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,497,234,513
+Text=B STOVE WITH OVEN/GAS RANGE
+ 
+  
+[Field]
+Name=F17_R16C_INDUCTIONCOOKER
+Position=599,524,628,544
+Item=F17_R16C_INDUCTIONCOOKER,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,527,161,543
+Text=C INDUCTION COOKER
+ 
+  
+[Field]
+Name=F17_R16D_AIRFRYER
+Position=599,554,628,574
+Item=F17_R16D_AIRFRYER,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,557,99,573
+Text=D AIR FRYER
+ 
+  
+[Field]
+Name=F17_R16E_MOVEN
+Position=599,584,628,604
+Item=F17_R16E_MOVEN,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,587,152,603
+Text=E MICROWAVE OVEN
+ 
+  
+[Field]
+Name=F17_R16F_WASH
+Position=599,614,628,634
+Item=F17_R16F_WASH,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,617,156,633
+Text=F WASHING MACHINE
+ 
+  
+[Field]
+Name=F17_16G_AIRCON
+Position=599,644,628,664
+Item=F17_16G_AIRCON,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,647,147,663
+Text=G AIR CONDITIONER
+ 
+  
+[Field]
+Name=F17_R16H_EFAN
+Position=599,674,628,694
+Item=F17_R16H_EFAN,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,677,347,693
+Text=H ELECTRIC FAN AND OTHER COOLING EQUIPMENT
+ 
+  
+  
+[Field]
+Name=F17_R16I_RADIO
+Position=599,704,628,724
+Item=F17_R16I_RADIO,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,707,366,723
+Text=I RADIO/RADIO CASSETTE (AM, FM, AND TRANSISTOR)
+ 
+  
+[Field]
+Name=F17_R16J_TV
+Position=599,734,628,754
+Item=F17_R16J_TV,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,737,106,753
+Text=J TELEVISION
+ 
+  
+[Field]
+Name=F17_R16K_CD
+Position=599,764,628,784
+Item=F17_R16K_CD,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,767,166,783
+Text=K CD/DVD/VCD PLAYER
+ 
+  
+[Field]
+Name=F17_R16L_AUDIO
+Position=599,794,628,814
+Item=F17_R16L_AUDIO,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,797,371,813
+Text=L AUDIO COMPONENT/STEREO SET/KARAOKE/VIDEOKE
+ 
+  
+[Field]
+Name=F17_R16M_LANDLINE
+Position=599,824,628,844
+Item=F17_R16M_LANDLINE,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,827,250,843
+Text=M LANDLINE/WIRELESS TELEPHONE
+ 
+  
+[Field]
+Name=F17_R16N_MOBILE
+Position=599,854,628,874
+Item=F17_R16N_MOBILE,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,857,76,873
+Text=N PHONE
+ 
+  
+[Field]
+Name=F17_R16O_TABLET
+Position=599,884,628,904
+Item=F17_R16O_TABLET,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,887,82,903
+Text=O TABLET
+ 
+  
+[Field]
+Name=F17_R16P_PC
+Position=599,914,628,934
+Item=F17_R16P_PC,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,917,558,933
+Text=P PERSONAL COMPUTER (DESKTOP, LAPTOP, NOTEBOOK, NETBOOK, AND OTHERS)
+ 
+  
+  
+[Field]
+Name=F17_R16Q_CAR
+Position=599,944,628,964
+Item=F17_R16Q_CAR,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,947,59,963
+Text=Q CAR
+ 
+  
+[Field]
+Name=F17_R16R_VAN
+Position=599,974,628,994
+Item=F17_R16R_VAN,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,977,58,993
+Text=R VAN
+ 
+  
+[Field]
+Name=F17_R16S_JEEP
+Position=599,1004,628,1024
+Item=F17_R16S_JEEP,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1007,63,1023
+Text=S JEEP
+ 
+  
+[Field]
+Name=F17_R16T_TRUCK
+Position=599,1034,628,1054
+Item=F17_R16T_TRUCK,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1037,74,1053
+Text=T TRUCK
+ 
+  
+[Field]
+Name=F17_R16U_MOTOR
+Position=599,1064,628,1084
+Item=F17_R16U_MOTOR,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1067,240,1083
+Text=U MOTORCYCLE/MOTOR SCOOTER
+ 
+  
+[Field]
+Name=F17_R16V_TRICYCLE
+Position=599,1094,628,1114
+Item=F17_R16V_TRICYCLE,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1097,94,1113
+Text=V TRICYCLE
+ 
+  
+[Field]
+Name=F17_R16W_BIKE
+Position=599,1124,628,1144
+Item=F17_R16W_BIKE,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1127,90,1143
+Text=W BICYCLE
+ 
+  
+[Field]
+Name=F17_R16X_PEDICAB
+Position=599,1154,628,1174
+Item=F17_R16X_PEDICAB,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1157,88,1173
+Text=X PEDICAB
+ 
+  
+[Field]
+Name=F17_R16Y_MBOAT
+Position=599,1184,628,1204
+Item=F17_R16Y_MBOAT,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1187,195,1203
+Text=Y MOTORIZED BOAT/BANCA
+ 
+  
+[Field]
+Name=F17_R16Z_BOAT
+Position=599,1214,628,1234
+Item=F17_R16Z_BOAT,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=TextBox
+Form=6
+  
+[Text]
+Position=18,1217,226,1233
+Text=Z NON MOTORIZED BOAT/BANCA
+ 
+  
+[Field]
+Name=F17_N05_INETPAY
+Position=599,1244,614,1264
+Item=F17_N05_INETPAY,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=6
+  
+[Text]
+Position=18,1247,577,1263
+Text=Any household member pay (whether prepaid or postpaid) when you access the internet
+ 
+[Block]
+Name=HCBLOCK1
+Label=HOUSEHOLD CONVENIENCES
+DisplayTogether=Yes
+Position=15
+Length=8
+  
+[Block]
+Name=HCBLOCK2
+Label=ICT DEVICES
+DisplayTogether=Yes
+Position=24
+Length=8
+  
+[Block]
+Name=HCBLOCK3
+Label=VEHICLES
+DisplayTogether=Yes
+Position=33
+Length=10
+  
+[EndGroup]
+  
+[Group]
+Required=Yes
+Name=GROUP004
+Label=RESULT VISIT
+Form=7
+Max=1
+  
+[Field]
+Name=F17_RESVISIT
+Position=194,13,209,33
+Item=F17_RESVISIT,FORM17_DICT
+FieldLabelType=DictionaryLabel
+DataCaptureType=RadioButton
+Form=7
+  
+[Text]
+Position=12,16,98,32
+Text=Result of Visit
  
 [EndGroup]
   
