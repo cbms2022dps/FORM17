@@ -29,9 +29,9 @@ function readApp()
    
 		dirdelete(backupDirectoryName);
 	endif;
-	backupDirectoryName = "/storage/emulated/0/Android/med/Form17/";
+	// backupDirectoryName = "/storage/emulated/0/Android/med/Form17/";
 	// backupDirectoryName = "/storage/emulated/0/Android/Form17";
-	// backupDirectoryName = "./med/Form17/";
+	backupDirectoryName = "./med/Form17/";
 	
 	string REGION1 = maketext("01_REG=%02d",F17_REG_PSGC);
 	dircreate(backupDirectoryName + REGION1);
@@ -91,8 +91,7 @@ function performEndInterview()
 end;
 
 function onStop()
-	savepartial();	
+	savepartial();
 	readapp();
-	
 end;
 

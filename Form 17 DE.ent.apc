@@ -242,4 +242,5 @@ if strip($) = "" then
 endif;
 PROC F17_RESVISIT
 postproc
+readApp();
 savepartial();

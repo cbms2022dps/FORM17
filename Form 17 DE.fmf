@@ -239,7 +239,7 @@ Text=Name of Enumerator
   
 [Field]
 Name=F17_EC
-Position=283,210,340,230
+Position=283,210,424,230
 Item=F17_EC,FORM17_DICT
 DataCaptureType=TextBox
 Form=1
