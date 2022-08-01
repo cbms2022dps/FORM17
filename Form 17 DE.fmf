@@ -91,7 +91,7 @@ Item=F17_C02_HGCLEVEL000
   
 [Form]
 Name=FORM003
-Label=HOUSING
+Label=HOUSING CHARACTERISTICS
 QuestionTextHeight=196
 Level=1
 Size=874,1289
@@ -1446,7 +1446,7 @@ Text=Dependent/beneficiary/member of Health/ Medical Insurance other than Philhe
 [Group]
 Required=Yes
 Name=GROUP005
-Label=HOUSING
+Label=HOUSING CHARACTERISTICS
 Form=6
 Max=1
   

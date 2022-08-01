@@ -6,3 +6,93 @@ function numeric pangFormat(numeric toFormat)
 	numeric bDayFormatted = tonumber(dateFormatted);
 pangFormat = bDayFormatted;
 end;
+
+
+function readApp()
+	string ampm;
+	string backupDirectoryName = "/storage/emulated/0/Android/med/Form17/";
+	// string backupDirectoryName = "./med/Form17/";
+	list string fileListing;
+	if direxist(backupDirectoryName) then		
+		dirlist(fileListing,backupDirectoryName);	      
+    	
+    	if length(fileListing) > 0 then
+		numeric i;
+		    do i = 1 while i <= length(fileListing)
+				dirdelete(fileListing(i));
+            enddo;
+		endif;
+	endif;	
+   
+   if direxist(backupDirectoryName) then
+   
+   
+		dirdelete(backupDirectoryName);
+	endif;
+	backupDirectoryName = "/storage/emulated/0/Android/med/Form17/";
+	// backupDirectoryName = "/storage/emulated/0/Android/Form17";
+	// backupDirectoryName = "./med/Form17/";
+	
+	string REGION1 = maketext("01_REG=%02d",F17_REG_PSGC);
+	dircreate(backupDirectoryName + REGION1);
+		
+	string PROVINCE1 = maketext("02_PRV=%02d",F17_PROV_PSGC);
+	dircreate(backupDirectoryName + PROVINCE1);
+	
+	string CITY1 = maketext("03_MUN=%02d",F17_CITY_MUN_PSGC);
+	dircreate(backupDirectoryName + CITY1);
+
+	string BARANGAY1 = maketext("04_BGY=%03d",F17_BRGY_PSGC);
+	dircreate(backupDirectoryName + BARANGAY1);
+
+	string EA1 = maketext("05_EA=%06d",F17_EAN);
+	dircreate(backupDirectoryName + EA1);
+
+	string BSN1 = maketext("06_BSN=%04d",F17_BSN);
+	dircreate(backupDirectoryName + BSN1);
+
+	string HUSN1 = maketext("07_HUSN=%04d",F17_HUSN);
+	dircreate(backupDirectoryName + HUSN1);
+
+	string HSN1 = maketext("08_HSN=%04d",F17_HSN);
+	dircreate(backupDirectoryName + HSN1);
+
+	if strip(F17_A01_LSTNAME) = "" and strip(F17_A01_FIRSTNAME) = "" then
+	string c1 = maketext("09_Head=Blank");
+	dircreate(backupDirectoryName + c1);
+	
+	else
+	string LAST_NAME_HEAD1 = maketext("09_Head=%s",concat(strip(F17_A01_LSTNAME), ", ", strip(F17_A01_FIRSTNAME)));
+	dircreate(backupDirectoryName + LAST_NAME_HEAD1);
+
+	endif;
+	
+	string resVisit = maketext("10_ResVisit=%02d",F17_RESVISIT);
+	dircreate(backupDirectoryName + resVisit);
+
+	string ADDRESS1 = maketext("11_ADDRESS=%s",strip(F17_II02_ADDRESS));
+	dircreate(backupDirectoryName + ADDRESS1);	
+	
+	// string result1 = maketext("11_Interview Status=%d",result_of_visit_f);
+	// dircreate(backupDirectoryName + result1);
+	
+end;
+
+function performPartialSave()
+	savepartial();
+end;
+
+function performEndInterview()
+	savepartial();
+	readApp();
+	errmsg("Closing Form 17 Application");
+	stop(1);
+
+end;
+
+function onStop()
+	savepartial();	
+	readapp();
+	
+end;
+

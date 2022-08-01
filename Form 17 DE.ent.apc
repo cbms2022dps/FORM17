@@ -2,6 +2,11 @@
 PROC GLOBAL
 
 PROC FORM17_FF
+preproc
+userbar(clear);
+userbar(add button,"Partial Save",performPartialSave);
+userbar(add button,"End Interview",performEndInterview);
+userbar(show);
 
 PROC F17_NUM_MEMBERS
 preproc
