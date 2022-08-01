@@ -141,6 +141,11 @@ ask if F17_A07_AGE(curocc()) >= 15;
 if F17_A07_AGE(curocc()) < 15 then
 	$ = 7;
 endif;
+
+postproc
+if $ in 1,2,3,6 then
+	skip to F17_P01G_PHLHEALTH;
+endif
 PROC F17_E01_WORK
 preproc
 ask if F17_A07_AGE(curocc()) >= 5;

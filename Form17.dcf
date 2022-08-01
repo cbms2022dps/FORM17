@@ -306,7 +306,7 @@ Label=Demographic Characteristics
 Name=DEMO_CHAR
 RecordTypeValue='2'
 MaxRecords=35
-RecordLen=173
+RecordLen=174
 
 [Item]
 Label=Last name
@@ -408,7 +408,7 @@ Value=10;10
 Label=Relationship to the head of the nuclear family?
 Name=F17_A04_RELTONUCFH
 Start=132
-Len=1
+Len=2
 DataType=Numeric
 
 [ValueSet]
@@ -424,11 +424,12 @@ Value=6;6 - Brother
 Value=7;7 - Sister
 Value=8;8 - Father
 Value=9;9 - Mother
+Value=10;10 - Other
 
 [Item]
 Label=Male or female?
 Name=F17_A05_SEX
-Start=133
+Start=134
 Len=1
 DataType=Numeric
 
@@ -441,7 +442,7 @@ Value=2;2 - Female
 [Item]
 Label=Month, day and year born
 Name=F17_A06_BIRTHDAY
-Start=134
+Start=135
 Len=8
 DataType=Numeric
 ZeroFill=Yes
@@ -449,14 +450,14 @@ ZeroFill=Yes
 [Item]
 Label=Age as of last birthday as of July 01, 2022?
 Name=F17_A07_AGE
-Start=142
+Start=143
 Len=3
 DataType=Numeric
 
 [Item]
 Label=Highest grade completed
 Name=F17_C02_HGCLEVEL
-Start=145
+Start=146
 Len=1
 DataType=Numeric
 ZeroFill=Yes
@@ -477,7 +478,7 @@ Value=8;8 - Level 8 Doctoral Level Education or Equivalent
 [Item]
 Label=Highest grade completed
 Name=F17_C02_HGC
-Start=146
+Start=147
 Len=5
 DataType=Numeric
 ZeroFill=Yes
@@ -583,7 +584,7 @@ Value=89998;89998 - If Graduate, Specify Program __________
 [Item]
 Label=Highest grade completed, specify
 Name=F17_C02_HGC_SPECIFY
-Start=151
+Start=152
 Len=8
 DataType=Numeric
 
@@ -3623,7 +3624,7 @@ Value=89999;89999 -  FIELD UNKNOWN
 [Item]
 Label=Currently attending school
 Name=F17_C03_CURATTEND
-Start=159
+Start=160
 Len=1
 DataType=Numeric
 
@@ -3636,25 +3637,25 @@ Value=2;2 - No
 [Item]
 Label=Overseas Filipino Indicator
 Name=F17_B06_OFI
-Start=160
+Start=161
 Len=1
 DataType=Numeric
 
 [ValueSet]
 Label=Overseas Filipino Indicator
 Name=F17_B06_OFI_VS1
-Value=1;1 - OVERSEAS FILIPINO WORKER (OFW) WITH CONTRACT
-Value=2;2 - OTHER OFW WITH NO CONTRACT
-Value=3;3 - EMPLOYEES IN PHIL. EMBASSY, CONSULATES & OTHER MISSIONS
-Value=4;4 - STUDENT ABROAD
-Value=5;5 - TOURIST
-Value=6;6 - OTHER OVERSEAS FILIPINO NOT ELSEWHERE CLASSIFIED
-Value=7;7 - RESIDENTS (PHILIPPINES)
+Value=1;1 - YES, OVERSEAS FILIPINO WORKER (OFW) WITH CONTRACT
+Value=2;2 - YES, OTHER OFW WITH NO CONTRACT
+Value=3;3 - YES, EMPLOYEE IN PHIL. EMBASSY, CONSULATES & OTHER MISSIONS
+Value=4;4 - YES, STUDENT ABROAD
+Value=5;5 - YES, TOURIST
+Value=6;6 - YES, OTHER OVERSEAS FILIPINO NOT ELSEWHERE CLASSIFIED
+Value=7;7 - NO, RESIDENTS (PHILIPPINES)
 
 [Item]
 Label=Do any work for at least one (1) hour, including work from home or telecommuting, during the past week
 Name=F17_E01_WORK
-Start=161
+Start=162
 Len=1
 DataType=Numeric
 
@@ -3667,7 +3668,7 @@ Value=2;2 - No
 [Item]
 Label=Did have a job or business during the past week?
 Name=F17_E03_JOBBUS
-Start=162
+Start=163
 Len=1
 DataType=Numeric
 
@@ -3681,7 +3682,7 @@ Value=3;3 - No, temporarily
 [Item]
 Label=Nature of employment?
 Name=F17_E11_EMPLOY
-Start=163
+Start=164
 Len=1
 DataType=Numeric
 ZeroFill=Yes
@@ -3696,7 +3697,7 @@ Value=3;3 - WORKED FOR DIFFERENT EMPLOYER ON DAY TO DAY OR WEEK TO WEEK BASIS
 [Item]
 Label=Normal working hours per day during the past week?
 Name=F17_E12_PWHRS
-Start=164
+Start=165
 Len=2
 DataType=Numeric
 
@@ -3708,7 +3709,7 @@ Value=1:16
 [Item]
 Label=Total number of hours worked during the past week
 Name=F17_E14_PWTOTHRS
-Start=166
+Start=167
 Len=3
 DataType=Numeric
 
@@ -3720,7 +3721,7 @@ Value=0:112
 [Item]
 Label=Want more hours of work during the past week
 Name=F17_E15_PWMORHRS
-Start=169
+Start=170
 Len=1
 DataType=Numeric
 
@@ -3733,7 +3734,7 @@ Value=2;2 - No
 [Item]
 Label=Look for additional work during the past week
 Name=F17_E16_PWADDWORK
-Start=170
+Start=171
 Len=1
 DataType=Numeric
 
@@ -3746,7 +3747,7 @@ Value=2;2 - No
 [Item]
 Label=Class of worker
 Name=F17_E18_CLASS
-Start=171
+Start=172
 Len=1
 DataType=Numeric
 
@@ -3764,7 +3765,7 @@ Value=6;6 - WORKED WITHOUT PAY IN OWN FAMILY-OPERATED FARM OR BUSINESS
 [Item]
 Label=Dependent/beneficiary/member of Philhealth
 Name=F17_P01G_PHLHEALTH
-Start=172
+Start=173
 Len=1
 DataType=Numeric
 
@@ -3777,7 +3778,7 @@ Value=2;2 - No
 [Item]
 Label=Dependent/beneficiary/member of Health/ Medical Insurance other than Philhealth
 Name=F17_P01D_MEDINSURE
-Start=173
+Start=174
 Len=1
 DataType=Numeric
 
@@ -3791,13 +3792,13 @@ Value=2;2 - No
 Label=Housing
 Name=HOUSING
 RecordTypeValue='3'
-RecordLen=275
+RecordLen=276
 
 [Item]
 Label=Type of building occupied by household
 Name=F17_R01_BUILDING
 Start=29
-Len=1
+Len=2
 DataType=Numeric
 
 [ValueSet]
@@ -3812,18 +3813,19 @@ Value=6;6 - Commercial/industrial/agriculture (e.g. office, factory, barn)
 Value=7;7 - Institutional living quarter (e.g. hotel, hospital, convent, jail)
 Value=8;8 - None (e.g. homeless, cart)
 Value=9;9 - Other types of building (e.g. bus/trailer, boat, tent), specify:
+Value=10;10 - Temporary evacuation center/relocation area(school/gym/relocation housing)
 
 [Item]
 Label=Type of building occupied by household, specify
 Name=F17_R01_BUILDOTH
-Start=30
+Start=31
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Main construction material of the roof of this building/housing unit
 Name=F17_R03_ROOF
-Start=60
+Start=61
 Len=1
 DataType=Numeric
 
@@ -3842,14 +3844,14 @@ Value=9;9 - Others, specify:
 [Item]
 Label=Main construction material of the roof of this building/housing unit, specify
 Name=F17_R03_OTHERS
-Start=61
+Start=62
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Construction material of the outer walls of this building
 Name=F17_R04_WALLS
-Start=91
+Start=92
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -3874,14 +3876,14 @@ Value=99;99 - Others, specify:
 [Item]
 Label=Construction material of the outer walls of this building, specify
 Name=F17_R04_WALLSOTH
-Start=93
+Start=94
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Main construction material of the floor of this housing unit
 Name=F17_R06_MFLOOR
-Start=123
+Start=124
 Len=1
 DataType=Numeric
 
@@ -3899,14 +3901,14 @@ Value=9;9 - Others, specify:
 [Item]
 Label=Main construction material of the floor of this housing unit, specify
 Name=F17_R06_MFLOOROTH
-Start=124
+Start=125
 Len=30
 DataType=Alpha
 
 [Item]
 Label=How many bedrooms does this housing unit have
 Name=F17_R09_BROOM
-Start=154
+Start=155
 Len=3
 DataType=Numeric
 ZeroFill=Yes
@@ -3914,7 +3916,7 @@ ZeroFill=Yes
 [Item]
 Label=Tenure status of the housing unit and lot occupied by household
 Name=F17_R10_TENURE
-Start=157
+Start=158
 Len=1
 DataType=Numeric
 
@@ -3932,7 +3934,7 @@ Value=7;7 - Rent-free house and lot without consent of owner
 [Item]
 Label=Is there any electricity in the dwelling place
 Name=F17_R12_ELCTRCTY
-Start=158
+Start=159
 Len=1
 DataType=Numeric
 
@@ -3945,7 +3947,7 @@ Value=2;2 - No
 [Item]
 Label=Household's main source of water supply
 Name=F17_Q01_MSWATER
-Start=159
+Start=160
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -3968,14 +3970,14 @@ Value=99;99 - Others, specify:
 [Item]
 Label=Household's main source of water supply, specify
 Name=F17_Q01A_MSWATER
-Start=161
+Start=162
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Main source of drinking water used by members of household
 Name=F17_Q03_WDRINK
-Start=191
+Start=192
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4004,14 +4006,14 @@ Value=99;99 - Others, specify:
 [Item]
 Label=Main source of drinking water used by members of household, specify
 Name=F17_Q03A_WDRINK
-Start=193
+Start=194
 Len=30
 DataType=Alpha
 
 [Item]
 Label=A REFRIGERATOR/FREEZER
 Name=F17_R16A_REF
-Start=223
+Start=224
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4019,7 +4021,7 @@ ZeroFill=Yes
 [Item]
 Label=B STOVE WITH OVEN/GAS RANGE
 Name=F17_R16B_STOVE
-Start=225
+Start=226
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4027,7 +4029,7 @@ ZeroFill=Yes
 [Item]
 Label=C INDUCTION COOKER
 Name=F17_R16C_INDUCTIONCOOKER
-Start=227
+Start=228
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4035,7 +4037,7 @@ ZeroFill=Yes
 [Item]
 Label=D AIR FRYER
 Name=F17_R16D_AIRFRYER
-Start=229
+Start=230
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4043,7 +4045,7 @@ ZeroFill=Yes
 [Item]
 Label=E MICROWAVE OVEN
 Name=F17_R16E_MOVEN
-Start=231
+Start=232
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4051,7 +4053,7 @@ ZeroFill=Yes
 [Item]
 Label=F WASHING MACHINE
 Name=F17_R16F_WASH
-Start=233
+Start=234
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4059,7 +4061,7 @@ ZeroFill=Yes
 [Item]
 Label=G AIR CONDITIONER
 Name=F17_16G_AIRCON
-Start=235
+Start=236
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4067,7 +4069,7 @@ ZeroFill=Yes
 [Item]
 Label=H ELECTRIC FAN AND OTHER COOLING EQUIPMENT
 Name=F17_R16H_EFAN
-Start=237
+Start=238
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4075,7 +4077,7 @@ ZeroFill=Yes
 [Item]
 Label=I RADIO/RADIO CASSETTE (AM, FM, AND TRANSISTOR)
 Name=F17_R16I_RADIO
-Start=239
+Start=240
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4083,7 +4085,7 @@ ZeroFill=Yes
 [Item]
 Label=J TELEVISION
 Name=F17_R16J_TV
-Start=241
+Start=242
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4091,7 +4093,7 @@ ZeroFill=Yes
 [Item]
 Label=K CD/DVD/VCD PLAYER
 Name=F17_R16K_CD
-Start=243
+Start=244
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4099,7 +4101,7 @@ ZeroFill=Yes
 [Item]
 Label=L AUDIO COMPONENT/STEREO SET/KARAOKE/VIDEOKE
 Name=F17_R16L_AUDIO
-Start=245
+Start=246
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4107,7 +4109,7 @@ ZeroFill=Yes
 [Item]
 Label=M LANDLINE/WIRELESS TELEPHONE
 Name=F17_R16M_LANDLINE
-Start=247
+Start=248
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4115,7 +4117,7 @@ ZeroFill=Yes
 [Item]
 Label=N PHONE
 Name=F17_R16N_MOBILE
-Start=249
+Start=250
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4123,7 +4125,7 @@ ZeroFill=Yes
 [Item]
 Label=O TABLET
 Name=F17_R16O_TABLET
-Start=251
+Start=252
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4131,7 +4133,7 @@ ZeroFill=Yes
 [Item]
 Label=P PERSONAL COMPUTER (DESKTOP, LAPTOP, NOTEBOOK, NETBOOK, AND OTHERS)
 Name=F17_R16P_PC
-Start=253
+Start=254
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4139,7 +4141,7 @@ ZeroFill=Yes
 [Item]
 Label=Q CAR
 Name=F17_R16Q_CAR
-Start=255
+Start=256
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4147,7 +4149,7 @@ ZeroFill=Yes
 [Item]
 Label=R VAN
 Name=F17_R16R_VAN
-Start=257
+Start=258
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4155,7 +4157,7 @@ ZeroFill=Yes
 [Item]
 Label=S JEEP
 Name=F17_R16S_JEEP
-Start=259
+Start=260
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4163,7 +4165,7 @@ ZeroFill=Yes
 [Item]
 Label=T TRUCK
 Name=F17_R16T_TRUCK
-Start=261
+Start=262
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4171,7 +4173,7 @@ ZeroFill=Yes
 [Item]
 Label=U MOTORCYCLE/MOTOR SCOOTER
 Name=F17_R16U_MOTOR
-Start=263
+Start=264
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4179,7 +4181,7 @@ ZeroFill=Yes
 [Item]
 Label=V TRICYCLE
 Name=F17_R16V_TRICYCLE
-Start=265
+Start=266
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4187,7 +4189,7 @@ ZeroFill=Yes
 [Item]
 Label=W BICYCLE
 Name=F17_R16W_BIKE
-Start=267
+Start=268
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4195,7 +4197,7 @@ ZeroFill=Yes
 [Item]
 Label=X PEDICAB
 Name=F17_R16X_PEDICAB
-Start=269
+Start=270
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4203,7 +4205,7 @@ ZeroFill=Yes
 [Item]
 Label=Y MOTORIZED BOAT/BANCA
 Name=F17_R16Y_MBOAT
-Start=271
+Start=272
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4211,7 +4213,7 @@ ZeroFill=Yes
 [Item]
 Label=Z NON MOTORIZED BOAT/BANCA
 Name=F17_R16Z_BOAT
-Start=273
+Start=274
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -4219,7 +4221,7 @@ ZeroFill=Yes
 [Item]
 Label=Any household member pay (whether prepaid or postpaid) when you access the internet
 Name=F17_N05_INETPAY
-Start=275
+Start=276
 Len=1
 DataType=Numeric
 
