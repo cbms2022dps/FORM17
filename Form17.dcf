@@ -83,7 +83,7 @@ ZeroFill=Yes
 Label=Form17 Record
 Name=FORM17_REC
 RecordTypeValue='1'
-RecordLen=467
+RecordLen=473
 
 [Item]
 Label=Name of Enumerator
@@ -96,20 +96,20 @@ DataType=Alpha
 Label=Enumerators Code
 Name=F17_EC
 Start=59
-Len=4
-DataType=Numeric
+Len=10
+DataType=Alpha
 
 [Item]
 Label=Date of spotcheck
 Name=F17_DATE1
-Start=63
+Start=69
 Len=8
 DataType=Numeric
 
 [Item]
 Label=Is there a CBMS sticker posted on the building/housing unit?
 Name=F17_I01_STICKER
-Start=71
+Start=77
 Len=1
 DataType=Numeric
 
@@ -122,7 +122,7 @@ Value=2;2 - No
 [Item]
 Label=Are the BSN, HUSN, and HSN correctly written on the sticker?
 Name=F17_I02_BHH
-Start=72
+Start=78
 Len=1
 DataType=Numeric
 
@@ -135,14 +135,14 @@ Value=2;2 - No
 [Item]
 Label=Specify need for improvement
 Name=F17_I02A_SPECIMP
-Start=73
+Start=79
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Is there an “X” mark for callback on the sticker?
 Name=F17_I03_XMARK
-Start=103
+Start=109
 Len=1
 DataType=Numeric
 
@@ -155,56 +155,56 @@ Value=2;2 - No
 [Item]
 Label=Date of Reinterview
 Name=F17_DATE2
-Start=104
+Start=110
 Len=8
 DataType=Numeric
 
 [Item]
 Label=What is your name?
 Name=F17_II01_NAME
-Start=112
+Start=118
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Last name
 Name=F17_A01_LSTNAME
-Start=142
+Start=148
 Len=30
 DataType=Alpha
 
 [Item]
 Label=First name
 Name=F17_A01_FIRSTNAME
-Start=172
+Start=178
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Suffix
 Name=F17_A01_SUFF
-Start=202
+Start=208
 Len=9
 DataType=Alpha
 
 [Item]
 Label=Middle name
 Name=F17_A01_MIDNAME
-Start=211
+Start=217
 Len=30
 DataType=Alpha
 
 [Item]
 Label=What is your address?
 Name=F17_II02_ADDRESS
-Start=241
+Start=247
 Len=80
 DataType=Alpha
 
 [Item]
 Label=Did a CBMS enumerator visit you?
 Name=F17_II03_CBMSENVISIT
-Start=321
+Start=327
 Len=1
 DataType=Numeric
 
@@ -217,56 +217,56 @@ Value=2;2 - No
 [Item]
 Label=When did the enumerator visit your household?
 Name=F17_II04_ENVISITHH
-Start=322
+Start=328
 Len=8
 DataType=Numeric
 
 [Item]
 Label=Who was interviewed during that visit?  (First Name , M.I., Last Name)
 Name=F17_II05_INTERVIEWED
-Start=330
+Start=336
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Last name
 Name=F17_A01_LSTNAME2
-Start=360
+Start=366
 Len=30
 DataType=Alpha
 
 [Item]
 Label=First name
 Name=F17_A01_FIRSTNAME2
-Start=390
+Start=396
 Len=30
 DataType=Alpha
 
 [Item]
 Label=Suffix
 Name=F17_A01_SUFF2
-Start=420
+Start=426
 Len=9
 DataType=Alpha
 
 [Item]
 Label=Middle name
 Name=F17_A01_MIDNAME2
-Start=429
+Start=435
 Len=30
 DataType=Alpha
 
 [Item]
 Label=How many members are there in your household as of July 01, 2022?
 Name=F17_II06_HHMEMBER
-Start=459
+Start=465
 Len=2
 DataType=Numeric
 
 [Item]
 Label=Total Number of Members
 Name=F17_NUM_MEMBERS
-Start=461
+Start=467
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -274,7 +274,7 @@ ZeroFill=Yes
 [Item]
 Label=Number of Males/s
 Name=F17_NUM_MALE
-Start=463
+Start=469
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -282,7 +282,7 @@ ZeroFill=Yes
 [Item]
 Label=Number of Female/s
 Name=F17_NUM_FEMALE
-Start=465
+Start=471
 Len=2
 DataType=Numeric
 ZeroFill=Yes
@@ -290,7 +290,7 @@ ZeroFill=Yes
 [Item]
 Label=Result of Visit
 Name=F17_RESVISIT
-Start=467
+Start=473
 Len=1
 DataType=Numeric
 
